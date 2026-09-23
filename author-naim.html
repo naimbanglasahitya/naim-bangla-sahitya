@@ -3,27 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>নাঈম - লেখকের প্রোফাইল</title>
+
+    <title>নাঈম — লেখকের প্রোফাইল</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        .header {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border-radius: 50%;
+            background: white;
+            color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .header h1 {
+            margin: 18px 0 8px;
+            font-size: 32px;
+        }
+
+        .header p {
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 12px;
+        }
+
+        .bio {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .stat {
+            background: #f5f5f5;
+            text-align: center;
+            padding: 18px 10px;
+            border-radius: 12px;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+
+        .work {
+            padding: 18px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .work:last-child {
+            border-bottom: none;
+        }
+
+        .work h3 {
+            margin: 0 0 7px;
+            font-size: 20px;
+        }
+
+        .category {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 15px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+
+            .header {
+                padding: 35px 15px;
+            }
+
+            .header h1 {
+                font-size: 27px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>নাঈম</h1>
+    <div class="header">
 
-    <h2>লেখকের পরিচিতি</h2>
-    <p>
-        বাংলা সাহিত্যের একজন লেখক। কবিতা ও বিভিন্ন
-        সাহিত্যকর্মের মাধ্যমে নিজের ভাবনা প্রকাশ করেন।
-    </p>
+        <div class="avatar">
+            ন
+        </div>
 
-    <h2>লেখকের তথ্য</h2>
-    <p>মোট লেখা: ১টি</p>
-    <p>কবিতা: ১টি</p>
+        <h1>নাঈম</h1>
 
-    <h2>নাঈমের লেখা</h2>
+        <p>লেখক • কবি</p>
 
-    <h3>সেই যে তুমি ছেড়ে গেছো</h3>
-    <p>বিভাগ: কবিতা</p>
+    </div>
+
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>লেখকের পরিচিতি</h2>
+
+            <p class="bio">
+                বাংলা সাহিত্যের একজন লেখক। কবিতা ও বিভিন্ন
+                সাহিত্যকর্মের মাধ্যমে নিজের ভাবনা, অনুভূতি
+                ও অভিজ্ঞতা প্রকাশ করেন।
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>লেখকের পরিসংখ্যান</h2>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <strong>১</strong>
+                    মোট লেখা
+                </div>
+
+                <div class="stat">
+                    <strong>১</strong>
+                    কবিতা
+                </div>
+
+                <div class="stat">
+                    <strong>০</strong>
+                    গল্প
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>নাঈমের লেখা</h2>
+
+            <div class="work">
+
+                <h3>সেই যে তুমি ছেড়ে গেছো</h3>
+
+                <div class="category">
+                    বিভাগ: কবিতা
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        © 2026 নাঈম বাংলা সাহিত্য
+    </div>
 
 </body>
 </html>
