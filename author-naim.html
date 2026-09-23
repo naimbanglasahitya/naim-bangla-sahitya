@@ -1,204 +1,290 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>নাঈম শিকদার | নাঈম বাংলা সাহিত্য</title>
+<title>নাঈম শিকদার | নাঈম বাংলা সাহিত্য</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    body {
-      font-family: "Noto Sans Bengali", "SolaimanLipi", Arial, sans-serif;
-      background: linear-gradient(135deg, #fff1f2, #f3e8ff, #e0f2fe);
-      color: #222;
-      min-height: 100vh;
-    }
+body{
+  font-family:"Noto Sans Bengali","SolaimanLipi",Arial,sans-serif;
+  background:linear-gradient(135deg,#fff1f2,#f5f3ff,#e0f2fe);
+  color:#222;
+}
 
-    /* Header */
-    .header {
-      background: linear-gradient(135deg, #7c3aed, #db2777, #ea580c);
-      color: white;
-      padding: 35px 20px 80px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
+/* TOP */
+.top{
+  background:linear-gradient(135deg,#4f46e5,#9333ea,#db2777,#f97316);
+  color:white;
+  text-align:center;
+  padding:45px 20px 90px;
+}
 
-    .header::before,
-    .header::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.12);
-    }
+.top small{
+  font-size:15px;
+  letter-spacing:1px;
+}
 
-    .header::before {
-      width: 180px;
-      height: 180px;
-      top: -80px;
-      left: -50px;
-    }
+.top h1{
+  font-size:34px;
+  margin-top:12px;
+}
 
-    .header::after {
-      width: 230px;
-      height: 230px;
-      bottom: -150px;
-      right: -70px;
-    }
+.top p{
+  margin-top:8px;
+  font-size:15px;
+}
 
-    .site-name {
-      font-size: 17px;
-      letter-spacing: 1px;
-      margin-bottom: 12px;
-      opacity: 0.9;
-    }
+/* PROFILE */
+.profile{
+  width:92%;
+  max-width:850px;
+  margin:-65px auto 30px;
+  background:white;
+  border-radius:28px;
+  padding:30px 20px;
+  text-align:center;
+  position:relative;
+  box-shadow:0 15px 45px rgba(0,0,0,.13);
+}
 
-    .header h1 {
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
+.avatar{
+  width:125px;
+  height:125px;
+  border-radius:50%;
+  margin:-90px auto 15px;
+  padding:5px;
+  background:linear-gradient(135deg,#f97316,#db2777,#7c3aed);
+}
 
-    .header p {
-      font-size: 15px;
-      opacity: 0.95;
-    }
+.avatar div{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#fef3c7,#fce7f3);
+  color:#7c3aed;
+  font-size:58px;
+  font-weight:bold;
+}
 
-    /* Profile Card */
-    .profile-card {
-      width: 92%;
-      max-width: 850px;
-      margin: -55px auto 30px;
-      background: rgba(255,255,255,0.96);
-      border-radius: 25px;
-      padding: 30px 22px;
-      text-align: center;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-      position: relative;
-      z-index: 2;
-    }
+.profile h2{
+  font-size:30px;
+  color:#7c3aed;
+}
 
-    .profile-photo {
-      width: 125px;
-      height: 125px;
-      margin: -90px auto 15px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #7c3aed, #db2777, #f97316);
-      padding: 5px;
-      box-shadow: 0 8px 25px rgba(124,58,237,0.35);
-    }
+.role{
+  color:#db2777;
+  margin:6px 0 18px;
+}
 
-    .profile-photo-inner {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #fef3c7, #fce7f3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 55px;
-      font-weight: bold;
-      color: #7c3aed;
-    }
+.facebook{
+  display:inline-block;
+  text-decoration:none;
+  color:white;
+  padding:10px 23px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#1877f2,#2563eb);
+}
 
-    .profile-card h2 {
-      font-size: 29px;
-      color: #7c3aed;
-      margin-bottom: 5px;
-    }
+/* COMMON */
+.section{
+  width:92%;
+  max-width:850px;
+  margin:28px auto;
+}
 
-    .writer-title {
-      color: #db2777;
-      font-size: 16px;
-      margin-bottom: 18px;
-    }
+.title{
+  text-align:center;
+  font-size:24px;
+  color:#7c3aed;
+  font-weight:bold;
+  margin-bottom:18px;
+}
 
-    /* Social */
-    .facebook-btn {
-      display: inline-block;
-      text-decoration: none;
-      color: white;
-      background: linear-gradient(135deg, #1877f2, #2563eb);
-      padding: 10px 22px;
-      border-radius: 30px;
-      font-size: 14px;
-      box-shadow: 0 6px 15px rgba(37,99,235,0.25);
-      transition: 0.3s;
-    }
+/* ABOUT */
+.about{
+  background:white;
+  border-radius:22px;
+  padding:25px;
+  line-height:1.9;
+  box-shadow:0 8px 25px rgba(0,0,0,.07);
+  border-left:6px solid #db2777;
+}
 
-    .facebook-btn:hover {
-      transform: translateY(-2px);
-    }
+.about p{
+  font-size:16px;
+  text-align:justify;
+}
 
-    /* Section */
-    .section {
-      width: 92%;
-      max-width: 850px;
-      margin: 25px auto;
-    }
+/* WRITING */
+.writings{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
 
-    .section-title {
-      text-align: center;
-      font-size: 24px;
-      color: #7c3aed;
-      margin-bottom: 18px;
-      font-weight: bold;
-    }
+.box{
+  background:white;
+  border-radius:20px;
+  padding:22px 10px;
+  text-align:center;
+  box-shadow:0 7px 22px rgba(0,0,0,.07);
+}
 
-    /* About */
-    .about {
-      background: white;
-      border-radius: 20px;
-      padding: 25px;
-      line-height: 1.9;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
-      border-left: 5px solid #db2777;
-    }
+.box .icon{
+  font-size:30px;
+  margin-bottom:8px;
+}
 
-    .about p {
-      font-size: 16px;
-      text-align: justify;
-    }
+.box h3{
+  color:#7c3aed;
+  font-size:16px;
+}
 
-    /* Writing Types */
-    .writing-types {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-    }
+/* WORK */
+.work{
+  background:linear-gradient(135deg,#fff,#fff7ed);
+  border-radius:22px;
+  padding:24px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
 
-    .type-card {
-      background: white;
-      padding: 20px 10px;
-      border-radius: 18px;
-      text-align: center;
-      box-shadow: 0 7px 20px rgba(0,0,0,0.07);
-      transition: 0.3s;
-    }
+.work h3{
+  color:#db2777;
+  font-size:22px;
+}
 
-    .type-card:hover {
-      transform: translateY(-5px);
-    }
+.work p{
+  color:#666;
+  margin-top:7px;
+}
 
-    .type-icon {
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
+.read{
+  display:inline-block;
+  margin-top:14px;
+  padding:9px 20px;
+  border-radius:25px;
+  text-decoration:none;
+  color:white;
+  background:linear-gradient(135deg,#7c3aed,#db2777);
+}
 
-    .type-card h3 {
-      font-size: 15px;
-      color: #7c3aed;
-    }
+/* QUOTE */
+.quote{
+  width:92%;
+  max-width:850px;
+  margin:35px auto;
+  padding:30px 20px;
+  border-radius:25px;
+  text-align:center;
+  color:white;
+  background:linear-gradient(135deg,#312e81,#7c3aed,#db2777);
+  box-shadow:0 12px 30px rgba(124,58,237,.25);
+}
 
-    /* Works */
-    .work-card {
-      background: linear-gradient(135deg, #ffffff, #fff7ed);
-      border-radius: 20px;
-      padding: 22px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-      border: 1px solid #f3
+.quote p{
+  font-size:19px;
+  line-height:1.8;
+}
+
+/* FOOTER */
+footer{
+  margin-top:40px;
+  background:#171717;
+  color:#ddd;
+  text-align:center;
+  padding:28px 15px;
+  font-size:14px;
+}
+
+footer b{
+  color:#f9a8d4;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+  .top h1{
+    font-size:28px;
+  }
+
+  .profile h2{
+    font-size:26px;
+  }
+
+  .writings{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .about{
+    padding:20px;
+  }
+
+  .about p{
+    font-size:15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="top">
+  <small>নাঈম বাংলা সাহিত্য</small>
+
+  <h1>লেখকের প্রোফাইল</h1>
+
+  <p>শব্দের ভেতর আমার গল্প</p>
+</div>
+
+
+<!-- PROFILE -->
+<div class="profile">
+
+  <div class="avatar">
+    <div>ন</div>
+  </div>
+
+  <h2>নাঈম শিকদার</h2>
+
+  <div class="role">
+    লেখক • কবি
+  </div>
+
+  <a
+    class="facebook"
+    href="https://www.facebook.com/naim.shikder.17709"
+    target="_blank">
+    ফেসবুক প্রোফাইল
+  </a>
+
+</div>
+
+
+<!-- ABOUT -->
+<div class="section">
+
+  <div class="title">
+    ✦ লেখক পরিচিতি ✦
+  </div>
+
+  <div class="about">
+
+    <p>
+      আমি নাঈম শিকদার। পিতা: ফিরোজ শিকদার ও মাতা নাসরিন বেগমের
+      একমাত্র তনয়। আমার জন্মস্থান গোপালগঞ্জ জেলার মুকসুদপুর উপজেলার
+      বাঘাদিয়া গ্রামে। বর্তমানে রাজশাহী বিশ্ববিদ্যালয়ে পড়াশোনা করার
+      জন্য রাজশাহীতে থাকি। আমি দশম শ্রেণি থেকে লেখালেখি করি।
+      কবিতা, গল্প, উপন্যাস ইত্যাদি নিয়ে আমার লেখালেখির পথচলা।
+   
