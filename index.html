@@ -6,87 +6,76 @@
 <title>নাঈম বাংলা সাহিত্য প্ল্যাটফর্ম</title>
 <style>
 :root{--bg:#fbf8f2;--card:#fff;--text:#29251f;--muted:#756d62;--accent:#7a4b2a;--line:#e8dfd3}
-*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans Bengali",system-ui,sans-serif}
-header{background:linear-gradient(135deg,#4d3022,#805337);color:#fff;padding:26px 18px 22px}
-.wrap{max-width:980px;margin:auto}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans Bengali",system-ui,sans-serif}
+header{background:linear-gradient(135deg,#4d3022,#805337);color:#fff;padding:26px 18px 22px}.wrap{max-width:980px;margin:auto}
 .brand{font-size:26px;font-weight:800;margin:0}.tag{margin:6px 0 18px;color:#f4e8db}
 .search{display:flex;gap:8px}.search input{flex:1;padding:13px 15px;border:0;border-radius:12px;font-size:15px}.search button{border:0;border-radius:12px;padding:0 18px;background:#f2d7b9;color:#4d3022;font-weight:700}
 nav{background:#fff;border-bottom:1px solid var(--line);overflow:auto;white-space:nowrap}nav a{display:inline-block;padding:14px 13px;color:var(--text);text-decoration:none;font-weight:600}
-main{padding:22px 14px 40px}.hero{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;margin-bottom:20px}.hero h1{margin:0 0 8px;font-size:25px}.hero p{margin:0;color:var(--muted);line-height:1.7}
-h2{font-size:20px;margin:24px 0 12px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:17px}.card .icon{font-size:26px}.card h3{margin:9px 0 5px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:13px}
+main{padding:22px 14px 40px}.hero{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;margin-bottom:20px}
+.hero h1{margin:0 0 8px;font-size:25px}.hero p{margin:0;color:var(--muted);line-height:1.7}
+h2{font-size:20px;margin:24px 0 12px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:17px}.card .icon{font-size:26px}.card h3{margin:9px 0 5px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:13px}
+.category-card{cursor:pointer;transition:.15s}.category-card.active{border:2px solid var(--accent);padding:16px}
 .poem{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}.poem h3{margin:0 0 4px}.poem .author{color:var(--accent);font-weight:700;font-size:14px}.poem .text{line-height:2;margin:15px 0 0;color:#453d35}
-.authors{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}.authorbox{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;gap:12px;align-items:center}.avatar{width:48px;height:48px;border-radius:50%;background:#ead8c5;display:grid;place-items:center;font-weight:800;color:#704329}
+.authors{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}.authorbox{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;gap:12px;align-items:center}
+.avatar{width:48px;height:48px;border-radius:50%;background:#ead8c5;display:grid;place-items:center;font-weight:800;color:#704329}
 .badge{display:inline-block;background:#f3e5d6;color:#704329;padding:5px 9px;border-radius:20px;font-size:12px;margin-top:6px}
+.notice{background:#f7efe6;border:1px solid var(--line);border-radius:14px;padding:14px;color:var(--muted);margin-top:12px}
 footer{padding:25px 15px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <p class="brand">📚 নাঈম বাংলা সাহিত্য প্ল্যাটফর্ম</p>
-    <p class="tag">শব্দে শব্দে প্রকাশ পাক মনের কথা।</p>
-    <div class="search">
-      <input id="search" placeholder="লেখা বা লেখকের নাম খুঁজুন..." oninput="searchSite()">
-      <button onclick="searchSite()">খুঁজুন</button>
-    </div>
-  </div>
-</header>
-
-<nav>
-  <div class="wrap">
-    <a href="#">হোম</a><a href="#writings">সকল লেখা</a><a href="#authors">লেখক</a>
-    <a href="#categories">বিভাগ</a><a href="#about">আমাদের সম্পর্কে</a>
-  </div>
-</nav>
-
+<header><div class="wrap">
+<p class="brand">📚 নাঈম বাংলা সাহিত্য প্ল্যাটফর্ম</p>
+<p class="tag">শব্দে শব্দে প্রকাশ পাক মনের কথা।</p>
+<div class="search"><input id="search" placeholder="লেখা বা লেখকের নাম খুঁজুন..." oninput="searchSite()"><button onclick="searchSite()">খুঁজুন</button></div>
+</div></header>
+<nav><div class="wrap"><a href="#">হোম</a><a href="#writings">সকল লেখা</a><a href="#authors">লেখক</a><a href="#categories">বিভাগ</a><a href="#about">আমাদের সম্পর্কে</a></div></nav>
 <main class="wrap">
-  <section class="hero">
-    <h1>বাংলা সাহিত্যের আপন ঠিকানা</h1>
-    <p>কবিতা, গল্প, উপন্যাস, মনের কথা, চিঠি ও নানা ধরনের সৃজনশীল লেখা—এক জায়গায়।</p>
-  </section>
-
-  <h2 id="categories">বিভাগ</h2>
-  <section class="grid">
-    <div class="card"><div class="icon">🖋️</div><h3>কবিতা</h3><p>ছন্দ, অনুভূতি ও ভাবনার কবিতা</p></div>
-    <div class="card"><div class="icon">📖</div><h3>গল্প</h3><p>ছোটগল্প ও গল্পকথা</p></div>
-    <div class="card"><div class="icon">📚</div><h3>উপন্যাস</h3><p>ধারাবাহিক ও পূর্ণাঙ্গ উপন্যাস</p></div>
-    <div class="card"><div class="icon">💭</div><h3>মনের কথা</h3><p>অনুভূতি, স্মৃতি ও ব্যক্তিগত লেখা</p></div>
-    <div class="card"><div class="icon">💌</div><h3>চিঠি</h3><p>প্রিয়জনকে লেখা চিঠি</p></div>
-    <div class="card"><div class="icon">📝</div><h3>প্রবন্ধ</h3><p>চিন্তা, মতামত ও আলোচনা</p></div>
-  </section>
-
-  <h2 id="writings">সাম্প্রতিক লেখা</h2>
-  <section id="results">
-    <article class="poem searchable" data-search="অপ্রাপ্তির নীলচিঠি নাঈম কবিতা">
-      <h3>অপ্রাপ্তির নীলচিঠি</h3><div class="author">লেখক: নাঈম</div>
-      <div class="text">কিছু চিঠি কখনো ঠিকানায় পৌঁছায় না,<br>তবুও তারা মনের ভেতর বেঁচে থাকে...</div>
-      <span class="badge">কবিতা</span>
-    </article>
-  </section>
-
-  <h2 id="authors">লেখক</h2>
-  <section class="authors">
-    <div class="authorbox"><div class="avatar">ন</div><div><b>নাঈম</b><br><span class="badge">লেখক</span></div></div>
-    <div class="authorbox"><div class="avatar">ক</div><div><b>কাজী নজরুল ইসলাম</b><br><span class="badge">সাহিত্যিক প্রোফাইল</span></div></div>
-    <div class="authorbox"><div class="avatar">র</div><div><b>রবীন্দ্রনাথ ঠাকুর</b><br><span class="badge">সাহিত্যিক প্রোফাইল</span></div></div>
-    <div class="authorbox"><div class="avatar">জ</div><div><b>জসীমউদ্দীন</b><br><span class="badge">সাহিত্যিক প্রোফাইল</span></div></div>
-  </section>
-
-  <section id="about" class="hero" style="margin-top:22px">
-    <h2 style="margin-top:0">পরবর্তী ধাপে যা যোগ হবে</h2>
-    <p>লেখক অ্যাকাউন্ট, লেখা জমা ও Admin approval, দৈনিক আপলোড সীমা, ৫ পয়েন্ট কমেন্ট সিস্টেম, ৫০ পয়েন্টে অতিরিক্ত ২টি কবিতা, মন্তব্য, Like/Bookmark, Author Dashboard এবং ভবিষ্যতে আয়/Revenue Sharing ব্যবস্থা।</p>
-  </section>
+<section class="hero"><h1>বাংলা সাহিত্যের আপন ঠিকানা</h1><p>কবিতা, গল্প, উপন্যাস, মনের কথা, চিঠি ও নানা ধরনের সৃজনশীল লেখা—এক জায়গায়।</p></section>
+<h2 id="categories">বিভাগ</h2>
+<section class="grid">
+<div class="card category-card" data-category="কবিতা" onclick="showCategory('কবিতা')"><div class="icon">🖋️</div><h3>কবিতা</h3><p>ছন্দ, অনুভূতি ও ভাবনার কবিতা</p></div>
+<div class="card category-card" data-category="গল্প" onclick="showCategory('গল্প')"><div class="icon">📖</div><h3>গল্প</h3><p>ছোটগল্প ও গল্পকথা</p></div>
+<div class="card category-card" data-category="উপন্যাস" onclick="showCategory('উপন্যাস')"><div class="icon">📚</div><h3>উপন্যাস</h3><p>ধারাবাহিক ও পূর্ণাঙ্গ উপন্যাস</p></div>
+<div class="card category-card" data-category="মনের কথা" onclick="showCategory('মনের কথা')"><div class="icon">💭</div><h3>মনের কথা</h3><p>অনুভূতি, স্মৃতি ও ব্যক্তিগত লেখা</p></div>
+<div class="card category-card" data-category="চিঠি" onclick="showCategory('চিঠি')"><div class="icon">💌</div><h3>চিঠি</h3><p>প্রিয়জনকে লেখা চিঠি</p></div>
+<div class="card category-card" data-category="প্রবন্ধ" onclick="showCategory('প্রবন্ধ')"><div class="icon">📝</div><h3>প্রবন্ধ</h3><p>চিন্তা, মতামত ও আলোচনা</p></div>
+</section>
+<h2 id="writings">সাম্প্রতিক লেখা <span id="categoryTitle" class="badge">সব বিভাগ</span></h2>
+<section id="results"><article class="poem searchable" data-category="কবিতা" data-search="অপ্রাপ্তির নীলচিঠি নাঈম কবিতা">
+<h3>অপ্রাপ্তির নীলচিঠি</h3><div class="author">লেখক: নাঈম</div><div class="text">কিছু চিঠি কখনো ঠিকানায় পৌঁছায় না,<br>তবুও তারা মনের ভেতর বেঁচে থাকে...</div><span class="badge">কবিতা</span>
+</article></section>
+<div id="emptyMessage" class="notice" style="display:none">এই বিভাগে এখনো কোনো লেখা যোগ করা হয়নি। নতুন লেখা যোগ হলে এখানে দেখা যাবে।</div>
+<h2 id="authors">লেখক</h2>
+<section class="authors">
+<div class="authorbox"><div class="avatar">ন</div><div><b>নাঈম</b><br><span class="badge">লেখক</span></div></div>
+<div class="authorbox"><div class="avatar">ক</div><div><b>কাজী নজরুল ইসলাম</b><br><span class="badge">সাহিত্যিক প্রোফাইল</span></div></div>
+<div class="authorbox"><div class="avatar">র</div><div><b>রবীন্দ্রনাথ ঠাকুর</b><br><span class="badge">সাহিত্যিক প্রোফাইল</span></div></div>
+<div class="authorbox"><div class="avatar">জ</div><div><b>জসীমউদ্দীন</b><br><span class="badge">সাহিত্যিক প্রোফাইল</span></div></div>
+</section>
+<section id="about" class="hero" style="margin-top:22px"><h2 style="margin-top:0">পরবর্তী ধাপে যা যোগ হবে</h2><p>লেখক অ্যাকাউন্ট, লেখা জমা ও Admin approval, দৈনিক আপলোড সীমা, ৫ পয়েন্ট কমেন্ট সিস্টেম, ৫০ পয়েন্টে অতিরিক্ত ২টি কবিতা, মন্তব্য, Like/Bookmark, Author Dashboard এবং ভবিষ্যতে আয়/Revenue Sharing ব্যবস্থা।</p></section>
 </main>
-
 <footer>© 2026 নাঈম বাংলা সাহিত্য প্ল্যাটফর্ম</footer>
-
 <script>
-function searchSite(){
-  const q=document.getElementById('search').value.trim().toLowerCase();
-  document.querySelectorAll('.searchable').forEach(el=>{
-    el.style.display=(!q || el.dataset.search.toLowerCase().includes(q))?'block':'none';
-  });
+let selectedCategory='সব বিভাগ';
+function showCategory(category){
+selectedCategory=category;
+document.getElementById('categoryTitle').textContent=category;
+document.getElementById('writings').scrollIntoView({behavior:'smooth'});
+document.querySelectorAll('.category-card').forEach(c=>c.classList.toggle('active',c.dataset.category===category));
+filterWorks();
 }
+function filterWorks(){
+const q=document.getElementById('search').value.trim().toLowerCase();let visible=0;
+document.querySelectorAll('.searchable').forEach(el=>{
+const categoryOK=selectedCategory==='সব বিভাগ'||el.dataset.category===selectedCategory;
+const searchOK=!q||el.dataset.search.toLowerCase().includes(q);
+el.style.display=(categoryOK&&searchOK)?'block':'none';if(categoryOK&&searchOK)visible++;
+});
+document.getElementById('emptyMessage').style.display=visible?'none':'block';
+}
+function searchSite(){filterWorks();}
 </script>
 </body>
 </html>
