@@ -1,223 +1,204 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>নাঈম — লেখকের প্রোফাইল</title>
+  <title>নাঈম শিকদার | নাঈম বাংলা সাহিত্য</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #222;
-        }
+    body {
+      font-family: "Noto Sans Bengali", "SolaimanLipi", Arial, sans-serif;
+      background: linear-gradient(135deg, #fff1f2, #f3e8ff, #e0f2fe);
+      color: #222;
+      min-height: 100vh;
+    }
 
-        .header {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 45px 20px;
-        }
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #7c3aed, #db2777, #ea580c);
+      color: white;
+      padding: 35px 20px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-        .avatar {
-            width: 100px;
-            height: 100px;
-            margin: auto;
-            border-radius: 50%;
-            background: white;
-            color: #111;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            font-weight: bold;
-        }
+    .header::before,
+    .header::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+    }
 
-        .header h1 {
-            margin: 18px 0 8px;
-            font-size: 32px;
-        }
+    .header::before {
+      width: 180px;
+      height: 180px;
+      top: -80px;
+      left: -50px;
+    }
 
-        .header p {
-            margin: 0;
-            opacity: 0.8;
-        }
+    .header::after {
+      width: 230px;
+      height: 230px;
+      bottom: -150px;
+      right: -70px;
+    }
 
-        .container {
-            max-width: 850px;
-            margin: 30px auto;
-            padding: 0 15px;
-        }
+    .site-name {
+      font-size: 17px;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      opacity: 0.9;
+    }
 
-        .card {
-            background: white;
-            border-radius: 18px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
+    .header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
 
-        .card h2 {
-            margin-top: 0;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 12px;
-        }
+    .header p {
+      font-size: 15px;
+      opacity: 0.95;
+    }
 
-        .bio {
-            line-height: 1.8;
-            color: #555;
-        }
+    /* Profile Card */
+    .profile-card {
+      width: 92%;
+      max-width: 850px;
+      margin: -55px auto 30px;
+      background: rgba(255,255,255,0.96);
+      border-radius: 25px;
+      padding: 30px 22px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+      position: relative;
+      z-index: 2;
+    }
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-        }
+    .profile-photo {
+      width: 125px;
+      height: 125px;
+      margin: -90px auto 15px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7c3aed, #db2777, #f97316);
+      padding: 5px;
+      box-shadow: 0 8px 25px rgba(124,58,237,0.35);
+    }
 
-        .stat {
-            background: #f5f5f5;
-            text-align: center;
-            padding: 18px 10px;
-            border-radius: 12px;
-        }
+    .profile-photo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #fef3c7, #fce7f3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 55px;
+      font-weight: bold;
+      color: #7c3aed;
+    }
 
-        .stat strong {
-            display: block;
-            font-size: 26px;
-            margin-bottom: 5px;
-        }
+    .profile-card h2 {
+      font-size: 29px;
+      color: #7c3aed;
+      margin-bottom: 5px;
+    }
 
-        .work {
-            padding: 18px 0;
-            border-bottom: 1px solid #eee;
-        }
+    .writer-title {
+      color: #db2777;
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
 
-        .work:last-child {
-            border-bottom: none;
-        }
+    /* Social */
+    .facebook-btn {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(135deg, #1877f2, #2563eb);
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-size: 14px;
+      box-shadow: 0 6px 15px rgba(37,99,235,0.25);
+      transition: 0.3s;
+    }
 
-        .work h3 {
-            margin: 0 0 7px;
-            font-size: 20px;
-        }
+    .facebook-btn:hover {
+      transform: translateY(-2px);
+    }
 
-        .category {
-            font-size: 14px;
-            color: #777;
-        }
+    /* Section */
+    .section {
+      width: 92%;
+      max-width: 850px;
+      margin: 25px auto;
+    }
 
-        .footer {
-            text-align: center;
-            padding: 30px 15px;
-            color: #777;
-            font-size: 14px;
-        }
+    .section-title {
+      text-align: center;
+      font-size: 24px;
+      color: #7c3aed;
+      margin-bottom: 18px;
+      font-weight: bold;
+    }
 
-        @media (max-width: 600px) {
+    /* About */
+    .about {
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      line-height: 1.9;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+      border-left: 5px solid #db2777;
+    }
 
-            .header {
-                padding: 35px 15px;
-            }
+    .about p {
+      font-size: 16px;
+      text-align: justify;
+    }
 
-            .header h1 {
-                font-size: 27px;
-            }
+    /* Writing Types */
+    .writing-types {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
 
-            .stats {
-                grid-template-columns: 1fr;
-            }
+    .type-card {
+      background: white;
+      padding: 20px 10px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 7px 20px rgba(0,0,0,0.07);
+      transition: 0.3s;
+    }
 
-            .card {
-                padding: 20px;
-            }
-        }
-    </style>
-</head>
+    .type-card:hover {
+      transform: translateY(-5px);
+    }
 
-<body>
+    .type-icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
 
-    <div class="header">
+    .type-card h3 {
+      font-size: 15px;
+      color: #7c3aed;
+    }
 
-        <div class="avatar">
-            ন
-        </div>
-
-        <h1>নাঈম</h1>
-
-        <p>লেখক • কবি</p>
-
-    </div>
-
-
-    <div class="container">
-
-        <div class="card">
-
-            <h2>লেখকের পরিচিতি</h2>
-
-            <p class="bio">
-                বাংলা সাহিত্যের একজন লেখক। কবিতা ও বিভিন্ন
-                সাহিত্যকর্মের মাধ্যমে নিজের ভাবনা, অনুভূতি
-                ও অভিজ্ঞতা প্রকাশ করেন।
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h2>লেখকের পরিসংখ্যান</h2>
-
-            <div class="stats">
-
-                <div class="stat">
-                    <strong>১</strong>
-                    মোট লেখা
-                </div>
-
-                <div class="stat">
-                    <strong>১</strong>
-                    কবিতা
-                </div>
-
-                <div class="stat">
-                    <strong>০</strong>
-                    গল্প
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="card">
-
-            <h2>নাঈমের লেখা</h2>
-
-            <div class="work">
-
-                <h3>সেই যে তুমি ছেড়ে গেছো</h3>
-
-                <div class="category">
-                    বিভাগ: কবিতা
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer">
-        © 2026 নাঈম বাংলা সাহিত্য
-    </div>
-
-</body>
-</html>
+    /* Works */
+    .work-card {
+      background: linear-gradient(135deg, #ffffff, #fff7ed);
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      border: 1px solid #f3
